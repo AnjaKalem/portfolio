@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Portfolio Anja Kalem</title>
+    <style>
+
+         @media  screen and (max-width: 600px) {
+            #navigacija {
+            display: none;
+            position: fixed;
+            background: rgb(238, 238, 238);
+            margin-top: 0;
+            z-index: 2;
+            filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+            }
+
+            .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+            }
+
+            .icon-menu {
+            display: block;
+            z-index: 2;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+            <div id="wrapper">
+                <div id="navigacija">
+                    <div class="linkovi">
+                        <a href="contact.html">contact</a>
+                    </div>
+                    <div class="linkovi">
+                        <a href="about.html">about me</a>
+                    </div>
+                    <div class="linkovi">
+                        <a href="index.html">projects</a>
+                    </div>
+                </div> <!--navigacija end-->
+
+                <button class="burger icon-menu" onclick="openMenu()">
+                    <span></span>
+                    <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+                    <span></span>
+                  </button>
+                                     
+            <section>
+                <div class="projects">
+                    <a href="pcelicaazdaja.html">
+                        <img src="img/thumbnail/thumbnail-pcelica.svg" alt="Pčelica aždaja">
+                    </a>
+                </div>
+                <div class="projects">
+                    <a href="konus.html">
+                        <img src="img/thumbnail/thumbnail-konus-rgb.svg" alt="Konus Logo">
+                    </a>
+                </div>
+                <div class="projects">
+                    <a href="gin.html">
+                        <img src="img/thumbnail/thumbnail-gin-01.svg" alt="Authentic Balkan Dry Gin">
+                    </a>
+                </div>
+                <div class="projects">
+                    <a href="egofriend.html">
+                        <img src="img/thumbnail/thumbnail-ego-friend-rgb.svg" alt="Ego Friend">
+                    </a>
+                </div>
+                <div class="projects">
+                    <a href="dnevnik-izgubljenih-dana.html">
+                        <img src="img/thumbnail/thumbnail-dnevnik.svg" alt="Dnevnik izgubljenih dana">
+                    </a>
+                </div>
+                <div class="projects">
+                   <a href="bcks.html">
+                    <img src="img/thumbnail/thumbnail-bcks-rgb.svg" alt="Buket cveća kita smeća">
+                   </a>
+                </div>
+                <div class="projects">
+                    <a href="splav-na-dan.html">
+                     <img src="img/thumbnail/thumbnail-splav-na-dan.svg" alt="Splav na dan">
+                    </a>
+                 </div>
+                 <div class="projects">
+                    <a href="pointsoft.html">
+                     <img src="img/thumbnail/thumbnail-pointsoft-rgb.svg" alt="Point soft">
+                    </a>
+                 </div>
+                 <div class="projects">
+                    <a href="lum-shisha-bar.html">
+                     <img src="img/thumbnail/thumbnail-lum-shisha-bar-01.svg" alt="Lum Shisha Bar">
+                    </a>
+                 </div>
+            </section>
+            </div>
+
+            <a href="#top"><div class="scroll-to-top"></div></a>
+       
+         
+    </div> <!--main tag end-->
+ 
+    <footer><div style="font-size: 14px;">
+        &copy; Copyright Anja Kalem
+    </div></footer>    
+
+    <script src="js/script-menu.js"></script>
+    <script src="js/script-scroll-to-top.js"></script>
+</body>
+</html>

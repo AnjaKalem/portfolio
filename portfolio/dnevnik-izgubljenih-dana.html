@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Dnevnik izgubljenih dana</title>
+    <style>
+        .logo-container {
+            height: 64vh;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        }
+
+        .logo-container-negative {
+            width: 100%;
+            height: 14vh;
+            background-color: #010101;
+        }
+
+        .logo-thumbnail-dnevnik {
+            width: 420px;
+            height: 250px;
+            background-image: url("img/logo-thumbnail-dnevnik.svg");
+            
+        }
+
+        .logo-negative {
+            height: 3em;
+            width: 5em;
+            background-image: url("img/logo-dnevnik-izgubljenih-dana-negative-tipo-04.svg");
+        }
+
+        .project-picture-container {   
+                width: 100%;         
+                display: flex;
+                flex-flow: row wrap;
+            }
+        
+        .day {
+            width: auto;
+            flex-basis: 33.33%;  
+        }
+      
+
+         /* Responsive */
+
+            @media screen and (max-width: 900px) {
+                .day {
+                flex-basis: 50%;
+                }
+            }
+
+            
+            @media screen and (max-width: 600px) {
+                .day {
+                flex-basis: 100%;
+                }
+
+                #navigacija {
+                display: none;
+                position: fixed;
+                background: rgb(238, 238, 238);
+                margin-top: 0;
+                z-index: 2;
+                filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+                }
+
+               .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+               }
+
+                .icon-menu {
+                display: block;
+                z-index: 2;
+                }
+                
+                .logo-container {
+                height: 87vh;
+                }
+            }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+       
+        <!--navigacija -->
+        <div id="navigacija">
+            <div class="linkovi">
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="linkovi">
+                <a href="about.html">about me</a>
+            </div>
+            <div class="linkovi">
+                <a href="index.html">projects</a>
+            </div>
+        </div> 
+
+        <button class="burger icon-menu" onclick="openMenu()">
+            <span></span>
+            <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+            <span></span>
+          </button>
+
+        <!-- section -->
+        <section>
+            <a href="index.html">
+                <div class="icon-back">
+                </div>
+            </a>
+
+            <!-- logo-container -->
+            <div class="logo-container">
+                <div class="logo logo-thumbnail-dnevnik"></div>
+            </div>
+
+            <div class="prazan"></div>
+
+
+            <!-- logo-negative -->
+           <div id="negative" class="logo-container-negative absolute">
+                <div class="logo-negative"></div>
+            </div>
+
+             <!--three dots-->
+             <a href="#first-scroll"><div class="dot-flashing"></div></a>
+
+            <div id="first-scroll" class="project-picture-container">
+
+                <!-- each day begins -->
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-01.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-02.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-03.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-04.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-05.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-06.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-07.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-08.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-09.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-10.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-11.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-12.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-13.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-14.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-15.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-16.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-17.svg" alt="">
+                </div>
+                <div class="day">
+                    <img src="img/dnevnik-izgubljenih-dana/dan-18.svg" alt="">
+                </div>
+                <!-- each day ends -->
+
+                <!-- <div class="project-picture">
+                    <img src="img/proba-dnevnik-05-05.jpg" alt="Dnevnik izgubljenih dana">
+                </div> -->
+            </div> 
+
+        </section>
+
+        <!-- tekst -->
+        <div id="tekst">
+            <div class="left">
+                <div class="projekat">
+                    <div id="projekat"><p>projekat</p></div>
+                    <div id="prazan"></div>
+                    <div id="ImeProjekta">Dnevnik<br> izgubljenih<br> dana</div>
+                    <div id="OpisProjekta">Vizuelni dnevnik zamišljen kao serija piktograma od kojih svaki predstavlja po jedan dan</div>
+                </div>
+                <div class="zadatak">
+                   <div id="zadatak"><p>zadatak</p></div>
+                   <div id="prazan"></div>
+                   <div id="ImeZadatka">Dnevnik<br> izgubljenih<br> dana</div>
+                   <div id="OpisZadatka">Grafička interpretacija dana izgubljenih usled pandemije izazvane virusom COVID-19</div>
+                </div>
+            </div> 
+            <div class="right">
+               <div class="predmet">
+                   <div id="predmet"><p>predmet</p></div>
+                   <div id="ImePredmeta">Grafičke komunikacije</div>
+               </div>
+               <div class="profesor">
+                   <div id="profesor"><p>profesor</p></div>
+                   <div id="ImeProfesora">Zoran Blažina</div>
+               </div>
+            </div>
+       </div>
+
+       <a href="#top"><div class="scroll-to-top"></div></a>
+
+        <!--arrows -->
+        <a href="bcks.html"><div id="next"></div></a>
+        <a href="egofriend.html"><div id="previous"></div></a>
+
+    </div>  <!--div main ends-->
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/script-sticky.js"></script>
+    <script src="js/script-menu.js"></script>
+    <script src="js/script-scroll-to-top.js"></script>
+</body>
+</html>

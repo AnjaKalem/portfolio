@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Pčelica aždaja</title>
+
+    <style>
+        img {
+            margin:0 auto;
+            max-width: 600px;
+        }
+
+        @font-face {
+            font-family: "Lato-Light";
+            src: url('Lato-Light.otf');
+        }
+
+        .logo-container {
+            height: 64vh;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+
+
+        .logo {
+            width: 100px;
+            height: 74px;
+            background-image: url(img/logo-pcelica.svg);
+        }
+
+        .logo-container-negative {
+            width: 100%;
+            height: 14vh;
+            background-image: linear-gradient( 90deg, #FFD400 20%, black 20%, black 40%, #FFD400 40%, #FFD400 60%, black 60%, black 80%, #FFD400 80%, #FFD400 100%);
+        }
+
+        p.lato {
+            font-family: 'Lato-Light';
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .last {
+            margin-bottom: 6em;
+        }
+
+        .project-picture-container {
+                height: 60vh;
+                width: 100%;
+                padding: 5.2em 2em;
+                background-color: white ;
+                display: flex;
+            }
+          
+         .one-picture {
+             display: block;
+         }  
+         
+         @media screen and (max-width: 600px) {
+            #navigacija {
+            display: none;
+            position: fixed;
+            background: rgb(238, 238, 238);
+            margin-top: 0;
+            z-index: 2;
+            filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+            } 
+
+            .linkovi {
+            text-align: center;
+            padding: 2em;
+            margin: 0;
+            padding: 2.3em 0 4em 0;
+            border-top-style: none;
+           }
+
+           .icon-menu {
+               z-index: 2;
+           }
+
+
+            .logo-container {
+            height: 87vh;
+            }
+
+            .project-picture-container {
+                height: auto;
+                display: block;
+                padding: 3.2em 2em 2em 2em;
+            }
+
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <div id="navigacija">
+            <div class="linkovi">
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="linkovi">
+                <a href="about.html">about me</a>
+            </div>
+            <div class="linkovi">
+                <a href="index.html">projects</a>
+            </div>
+        </div> <!--navigacija end-->
+
+        <button class="burger icon-menu" onclick="openMenu()">
+            <span></span>
+            <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+            <span></span>
+          </button>
+
+        <section>
+            <a href="index.html">
+                <div class="icon-back">
+                </div>
+            </a>
+
+            <!--logo -->
+            <div class="logo-container container">
+                <div class="logo"></div>
+                <p class="lato">JEDE SMEĆE IZ KRAJA</p>
+            </div>
+
+            <div class="prazan"></div>
+
+           <!--negative -->
+           <div id="negative" class="logo-container-negative absolute">
+            </div>
+
+            <!--three dots-->
+            <a href="#first-scroll"><div class="dot-flashing"></div></a>
+
+            <div id="first-scroll" class="project-picture-container">
+               <div class="project-picture">
+                   <img src="img/pcelica-web/1-03.jpg" alt="">
+               </div>
+               <div class="project-picture">
+                <img src="img/pcelica-web/2-03.jpg" alt="">
+               </div>
+            </div>
+
+            <div class="container">
+                <p class="lato">KANTE ZA RECIKLAŽNI OTPAD</p>
+            </div>
+
+            <div class="project-picture-container one-picture">
+                <div class="project-picture">
+                    <img src="img/pcelica-web/3-03.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="container">
+                <p class="lato">REAGUJE NA UBAČENO SMEĆE</p>
+            </div>
+
+            
+            <div class="project-picture-container">
+                <div class="project-picture">
+                    <img src="img/pcelica-web/4-03.jpg" alt="">
+                </div>
+                <div class="project-picture">
+                 <img src="img/pcelica-web/5-03.jpg" alt="">
+                </div>
+             </div>
+             <div class="container">
+                <p class="lato last">PODESIVA VELIČINA</p>
+            </div>
+        </section>
+
+        <div id="tekst">
+            <div class="left">
+                <div class="projekat">
+                    <div id="projekat"><p>projekat</p></div>
+                    <div id="prazan"></div>
+                    <div id="ImeProjekta">Pčelica<br>aždaja</div>
+                    <div id="OpisProjekta">Interaktivna kanta za reciklažni otpad</div>
+                </div>
+                <div class="zadatak">
+                   <div id="zadatak"><p>zadatak</p></div>
+                   <div id="prazan"></div>
+                   <div id="ImeZadatka">Master rad</div>
+                   <div id="OpisZadatka">Pčelica aždaja je usled zračenja savremenog društva evoluirala.
+                    Umesto nektarom i polenom koji se nalaze na cveću, ona svoju
+                    hranu traži u smeću. Njeno, kao i prisustvo ostalih pčela na planeti,
+                    zavisi od čoveka. Svako je pozvan da je nahrani i svakome ko to
+                    učini ona će se srdačno zahvaliti.
+                    Pčelica aždaja je brend koji za glavni cilj ima podizanje svesti o
+                    važnosti očuvanja životne sredine.</div>
+                </div>
+            </div> 
+            <div class="right">
+               <div class="predmet">
+                   <div id="predmet"><p>predmet</p></div>
+                   <div id="ImePredmeta">Prostorna grafika</div>
+               </div>
+               <div class="profesor">
+                   <div id="profesor"><p>profesor</p></div>
+                   <div id="ImeProfesora">Miloš Ilić</div>
+               </div>
+            </div>
+       </div> <!--div tekst ends-->
+
+        <a href="#top"><div class="scroll-to-top"></div></a>
+
+        <a href="konus.html"><div id="next"></div></a>
+        <a href="lum-shisha-bar.html"><div id="previous"></div></a>
+    </div>   
+    <!-- main ends -->>
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/script-sticky.js"></script>
+    <script src="js/script-menu.js"></script>
+    <script src="js/script-scroll-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Authentic Balkan Dry Gin</title>
+    <style>
+
+        .logo-container {
+            height: 64vh;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            background-image: url(img/logo-gin-01.svg);
+            background-repeat: no-repeat;
+        }
+
+        .logo-container-negative {
+            background-color: black;
+        }
+
+        .logo-negative {
+            background-image: url(img/logo-gin-negative-01.svg);
+            width: 6.5em;
+            height: 3em;
+        }
+
+        .project-picture-container {
+                padding: 3em;
+                width: 100%;
+                background-color: white;
+            }
+
+        .project-picture {
+            margin: 0 auto;
+            width: 60vw;
+            max-width: 900px;
+            }
+
+            @media  screen and (max-width: 600px) {
+                #navigacija {
+                display: none;
+                position: fixed;
+                background: rgb(238, 238, 238);
+                margin-top: 0;
+                z-index: 2;
+                filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+                }
+
+                .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+            }
+
+            .icon-menu {
+            display: block;
+            z-index: 2;
+            }
+
+            .logo-container {
+            height: 87vh;
+            }
+
+            .logo {
+                width: 6em;
+                height: 4em;
+            }
+
+            .logo-negative {
+                width: 4.5em;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <!--navigacija -->
+        <div id="navigacija">
+            <div class="linkovi">
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="linkovi">
+                <a href="about.html">about me</a>
+            </div>
+            <div class="linkovi">
+                <a href="index.html">projects</a>
+            </div>
+        </div> 
+
+        <button class="burger icon-menu" onclick="openMenu()">
+            <span></span>
+            <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+            <span></span>
+          </button>
+
+        <!--section -->
+        <section>
+            <a href="index.html">
+                <div class="icon-back">
+                </div>
+            </a>
+            
+            <!-- logo -->
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+
+            <div class="prazan"></div>
+            <!-- negative -->
+            <div id="negative" class="logo-container-negative absolute">
+                <div class="logo-negative "></div>
+            </div>
+            
+             <!--three dots-->
+             <a href="#first-scroll"><div class="dot-flashing"></div></a>
+
+            <div id="first-scroll" class="project-picture-container">
+
+               <div class="project-picture">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="img/project-gin-sm.jpg">
+                    <img src="img/project-gin.jpg" alt="">
+                  </picture>
+               </div>
+            </div>
+        </section>
+
+
+        <!-- tekst -->
+        <div id="tekst">
+            <div class="left">
+                <div class="projekat">
+                    <div id="projekat"><p>projekat</p></div>
+                    <div id="prazan"></div>
+                    <div id="ImeProjekta">Džin</div>
+                    <div id="OpisProjekta">Pročišćen dizajn flaše za džin.</div>
+                </div>
+                <div class="zadatak">
+                   <div id="zadatak"><p>zadatak</p></div>
+                   <div id="prazan"></div>
+                   <div id="ImeZadatka">Dizajn<br>pakovanja</div>
+                   <div id="OpisZadatka">Osmisliti pakovanje i identitet za zamišljeni brend Authentic Balkan Dry Gin.</div>
+                </div>
+            </div> 
+            <div class="right">
+               <div class="predmet">
+                   <div id="predmet"><p>predmet</p></div>
+                   <div id="ImePredmeta">Prostorna grafika</div>
+               </div>
+               <div class="profesor">
+                   <div id="profesor"><p>profesor</p></div>
+                   <div id="ImeProfesora">Miloš Ilić</div>
+               </div>
+            </div>
+       </div> 
+
+       <a href="#top"><div class="scroll-to-top"></div></a>
+
+       <!-- arrows -->
+       <a href="egofriend.html"><div id="next"></div></a>
+       <a href="konus.html"><div id="previous"></div></a>
+
+    </div>  <!--div main ends-->
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/script-sticky.js"></script>
+    <script src="js/script-menu.js"></script>
+    <script src="js/script-scroll-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Contact</title>
+
+    <style>
+       .main {
+         text-align: center;
+       }
+
+       .info {
+         margin-top: 26vh;
+       }
+
+       @media screen and (max-width: 600px) {
+
+                p {
+                    margin: 1.5em;
+                }
+               
+                #navigacija {
+                display: none;
+                position: fixed;
+                background: rgb(238, 238, 238);
+                margin-top: 0;
+                z-index: 2;
+                filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+                top: 0;
+                }
+
+               .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+               }
+            }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <div id="navigacija">
+      <div class="linkovi">
+          <a href="contact.html">contact</a>
+      </div>
+      <div class="linkovi">
+          <a href="about.html">about me</a>
+      </div>
+      <div class="linkovi">
+          <a href="index.html">projects</a>
+      </div>
+  </div> <!--navigacija end-->
+
+  <button class="burger icon-menu" onclick="openMenu()">
+    <span></span>
+    <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+    <span></span>
+  </button>
+  
+    <div class="info">
+      <div id="mail">
+        <p>e-mail: </p> <a href="mailto:anja.kalem@gmail.com">anja.kalem@gmail.com</a>
+      </div>
+        <p>phone: </p><p id="phone">+381 63 858 48 48</p>
+        <p>facebook: </p>
+        <div id="facebook">
+          <a href="https://www.facebook.com/profile.php?id=100011151006085">Anja Kalem</a>
+        </div>
+    </div>
+  
+
+  </div> <!--main div end-->
+
+  <script src="js/script-menu.js"></script>
+    
+</body>
+</html>

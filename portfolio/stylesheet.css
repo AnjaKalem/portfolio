@@ -1,0 +1,531 @@
+ 
+body {
+    background-color: #eee;
+    font-family: Bahnschrift;
+    color:  rgb(129, 129, 129);
+    margin: 0;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.main {
+    max-width: 1336px;
+    margin: auto;
+}
+
+section {
+  clear:both;
+  box-shadow: 0 0 20px gainsboro;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.projects {
+    flex-basis: 33.33%;                 
+}
+
+.projects:hover {
+    z-index: 1;
+    transform: scale(1.02);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+}
+.projects:active {
+  filter: opacity(0.96);
+}
+
+img {
+    width: 100%;
+    display: block;
+    
+  }
+
+ /* Tipografija */
+
+@font-face {
+  font-family: "Bahnschrift";
+  src:url('Bahnschrift.TTF');
+}
+
+
+ /* Responsive */
+
+ @media screen and (max-width: 900px) {
+    .projects {
+       flex-basis: 50%;
+    }
+  
+    .icon-back {
+      position: fixed;
+    }
+  }
+
+  
+ @media screen and (max-width: 600px) {
+      .projects {
+        flex-basis: 100%;
+      }
+
+      #next, #previous {
+        display: none;
+      }
+}
+
+ 
+  /* Ovo su linkovi */
+
+.linkovi a {
+    color: rgb(129, 129, 129);
+    font-family: Bahnschrift;
+    font-size: 1.2em;
+    text-decoration: none; 
+}
+
+#navigacija {
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    margin-top: 1vh;
+}
+
+.linkovi {
+  margin: 11vh 0px 50px 50px;
+  padding-top: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: rgb(161, 161, 161);
+  
+}
+
+a:hover {
+  color: rgb(180, 180, 180);
+}
+
+/* contact */
+
+#mail a {
+  color: rgb(129, 129, 129);
+  font-family: Bahnschrift;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+#mail a:hover {
+  color: darkgrey;
+}
+
+#facebook a {
+  color: rgb(129, 129, 129);
+  font-family: Bahnschrift;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+#facebook a:hover {
+  color: darkgrey;
+}
+
+#phone {
+  color: rgb(129, 129, 129);
+  font-family: Bahnschrift;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+
+footer {
+  position: fixed;
+  left: 17px;
+  right: 0;
+  bottom: 10px;
+}
+
+/* css za pojedinacne projekte */
+
+#sadrzaj {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(98, 98, 245);
+}
+
+#tekst {
+  width: 50%;
+  height: auto;
+  margin: 10vh auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: rgb(97, 97, 97);
+}
+
+
+@media screen and (max-width: 600px) {
+  #tekst {
+    width: 255px;
+    margin: 8vh auto;
+  }
+
+  .right {
+      padding-bottom: 2em;
+      padding-top: 2em;
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      grid-gap: 20px 40px;
+      width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .right {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    margin-top: 2em;
+    justify-content: space-between;
+  }
+}
+
+
+
+.projekat ,
+.zadatak {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-gap: 20px 40px;
+}
+
+@media screen and (min-width: 900px) {
+        
+  .projekat , .zadatak  {
+      display: grid;
+      grid-template-columns: 0.5fr 2fr;
+  }
+
+  .zadatak {
+      margin-top: 2em;
+  }
+  }
+
+
+#projekat p, #zadatak p, #predmet p, #profesor p {
+  border-top: solid 2px rgb(192, 192, 192);
+  padding-top: 5px;
+  color: rgb(129, 129, 129);
+}
+
+#projekat p, #zadatak p {
+  width: 3.6em;
+}
+
+
+#predmet, #profesor {
+  float: left;
+  margin-bottom: 19px;
+}
+#ImePredmeta, #ImeProfesora {
+  clear: both;
+}
+
+/* next i previous */
+
+#next {
+  position:fixed;
+  top: 54vh;
+  right: 3.5vw;
+
+  height: 14px;
+  width: 14px;
+
+  border-style: solid solid none none;
+  border-color: rgb(161, 161, 161);
+  border-width: 2px;
+
+  transform: rotate(45deg);
+}
+
+#previous {
+  position:fixed;
+  top: 54vh;
+  left: 3.5vw;
+
+  height: 14px;
+  width: 14px;
+
+  border-style: none none solid solid;
+  border-color: rgb(161, 161, 161);
+  border-width: 2px;
+
+  transform: rotate(45deg);
+}
+
+/**************** LOGO *******************/
+
+.logo {
+  margin: auto;
+  background-repeat: no-repeat;
+}
+
+.logo-container {
+  height: 64vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.prazan {
+  max-width: 1336px;
+  margin: 0 auto;
+  width: 100%;
+  height: 9vh;
+  background-color: white;
+}
+
+.sticky {
+  position: sticky;
+  top:-1px;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+
+ .logo-container-negative {
+            max-width: 1336px;
+            margin: 0 auto;
+
+            width: 101%;
+            height: 14vh;
+            display: flex;
+            justify-content: space-around;
+}
+
+          .logo-negative {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+          }
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+
+ .dot-flashing {
+  position: absolute;
+  right: 3.2em;
+  bottom: 2.6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #818181;
+  color: #818181;
+  animation: dotFlashing 1.5s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: 0px;
+  top: -15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #818181;
+  color: #818181;
+  animation: dotFlashing 1.5s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 0px;
+  top: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #818181;
+  color: #818181;
+  animation: dotFlashing 1.5s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #818181;
+  }
+  50%,
+  100% {
+    background-color: #c0c0c0;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Flashing Responsive
+ * ==============================================
+ */
+
+ @media  screen and (max-width: 600px) {
+    .dot-flashing, .dot-flashing::before, .dot-flashing::after {
+    height: 5px;
+    width: 5px;
+    right: 2em;
+    bottom: 2.4em;
+    background-color: #c0c0c0;
+    color: #c0c0c0;
+    }
+  
+    .dot-flashing::after {
+        top: 10px;
+    }
+  
+    .dot-flashing::before {
+        top: -10px;
+    } 
+
+    @keyframes dotflashing {
+      0% {
+        background-color: #c0c0c0;
+      }
+      50%,
+      100% {
+        background-color: white;
+      }
+    } 
+ }
+
+
+/****************  ICON BACK  *******************/
+
+.icon-back {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.icon-back::before {
+  content: '';
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 3.5em;
+  left: 3em;
+  background-repeat: no-repeat;
+  background-image: url(img/icon-back-09.svg);
+}
+
+@media screen and (max-width: 600px) {
+  .icon-back::before {
+    width: 24px;
+    top: 2em;
+    left: 2em;
+  }
+}
+
+/****************  ICON MENU  *******************/
+
+.icon-menu {
+    background: transparent;
+}
+
+/****************  BURGER  *******************/
+.burger {
+  display: block;
+  position: fixed;
+  right: 2em;
+  top: 2.4em;
+  height: 1.6em;
+  width: 1.4em;
+  cursor: pointer;
+  border: none;
+  z-index: 2;
+}
+
+.burger:hover span {
+background: #A1A1A1;
+}
+
+.burger span {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 2px;
+transition: all 0.2s, background 0s;
+background: #A1A1A1;;
+}
+
+.burger span:nth-child(2) {
+top: 6px;
+}
+
+.burger span:last-child {
+top: 12px;
+}
+
+.nav-open span:first-child, .nav-open span:last-child {
+top: 8px;
+}
+
+.nav-open span:first-child {
+transform: rotate(45deg);
+}
+
+.nav-open span:last-child {
+transform: rotate(-45deg);
+}
+
+.nav-open span:nth-child(2) {
+opacity: 0;
+visibility: hidden;
+}
+
+.hidden {
+display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .burger {
+    display: none;
+  }
+}
+
+/********************* SCROLL-TO-TOP ***************************/
+
+.scroll-to-top {
+  width: 24px;
+  height: 20px;
+  background-image: url('img/icon-back-09.svg');
+  background-size: cover;
+  border-radius: 100%;
+  transform: rotate(90deg);
+  position: fixed;
+  bottom: 2.4em;
+  right: 2em;
+  display: none;
+}
+
+
+
+
+
+
+
+

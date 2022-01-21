@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>About Me</title>
+    <style>
+
+        .about {
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .logo {
+            margin-top: 17vh;
+            height: 75px;
+            width: 75px;
+            background-image: url('img/logo-anja-kalem-01.svg');
+            filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+        }
+
+        @media  screen and (max-width: 600px) {
+                p {
+                    margin: 0;
+                }
+
+                .about {
+                    text-align: center;
+                    padding: 3em;
+                }
+
+                .logo {
+                    margin-top: 27vh;
+                }
+
+                #navigacija {
+                display: none;
+                position: fixed;
+                background: rgb(238, 238, 238);
+                margin-top: 0;
+                filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+                top: 0;
+                z-index: 2;
+                }
+
+            .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+               }
+ 
+            .icon-menu {
+                background-image: none;
+                display: block;
+            } 
+
+            .burger {
+                display: block;
+                position: fixed;
+                right: 2em;
+                top: 2.4em;
+                height: 1.6em;
+                width: 1.4em;
+                cursor: pointer;
+                border: none;
+                z-index: 2;
+            }
+
+            .burger:hover span {
+            background: #A1A1A1;
+            }
+
+            .burger span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            transition: all 0.2s, background 0s;
+            background: #A1A1A1;;
+            }
+
+            .burger span:nth-child(2) {
+            top: 6px;
+            }
+
+            .burger span:last-child {
+            top: 12px;
+            }
+
+            .nav-open span:first-child, .nav-open span:last-child {
+            top: 8px;
+            }
+
+            .nav-open span:first-child {
+            transform: rotate(45deg);
+            }
+
+            .nav-open span:last-child {
+            transform: rotate(-45deg);
+            }
+
+            .nav-open span:nth-child(2) {
+            opacity: 0;
+            visibility: hidden;
+            }
+
+            .hidden {
+            display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div id="navigacija">
+            <div class="linkovi">
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="linkovi">
+                <a href="about.html">about me</a>
+            </div>
+            <div class="linkovi">
+                <a href="index.html">projects</a>
+            </div>
+        </div>
+
+        <button class="burger icon-menu" onclick="openMenu()">
+            <span></span>
+            <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+            <span></span>
+          </button>
+
+            <div class="logo"></div>
+        
+            <p class="about">Hello, I am Anja Kalem and I am currently attending master academic studies of graphic design at the Faculty of Applied Arts. I see graphic design as a way of communication that goes beyond language boundaries.
+                My long-term goal as a nature lover is to raise awareness about harmfull human influence on it.</p>
+        
+
+    </div> <!--main ends-->
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/script-menu.js"></script>
+    <script>
+        const burger = document.querySelector(".burger");
+
+        burger.addEventListener("click", function () {
+            const body = document.body;
+            body.classList.toggle("nav-open");
+            
+        });
+    </script>
+        
+</body>
+</html>

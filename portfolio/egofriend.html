@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Ego Friend</title>
+
+    <style>
+        
+        .logo-container {
+            height: 70vh;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        }
+
+
+        .logo-container-negative {
+            background-color: #FBD8D2;
+        }
+
+        .logo-ego-friend {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            background-image: url("img/logo-ego-friend-01.svg");
+            background-repeat: no-repeat;
+        }
+
+        .logo-negative {
+            width: 50px;
+            height: 50px;
+            background-image: url("img/logo-ego-friend-icon-01.svg");
+        }
+
+        .project-picture-container {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 3em;
+            }
+        
+            .project-picture {
+            margin: 0 auto;
+            width: 60vw;
+            max-width: 900px;
+            }
+
+
+        @media  screen and (max-width: 600px) {
+            #navigacija {
+            display: none;
+            position: fixed;
+            background: rgb(238, 238, 238);
+            margin-top: 0;
+            z-index: 2;
+            filter: drop-shadow(0 0 5px rgb(145, 145, 145));
+            }
+
+            .linkovi {
+                text-align: center;
+                padding: 2em;
+                margin: 0;
+                padding: 2.3em 0 4em 0;
+                border-top-style: none;
+            }
+
+            .icon-menu {
+            display: block;
+            z-index: 2;
+            }
+
+            .logo-container {
+            height: 87vh;
+            }
+
+        }
+
+            
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <!-- navigacija -->
+        <div id="navigacija">
+            <div class="linkovi">
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="linkovi">
+                <a href="about.html">about me</a>
+            </div>
+            <div class="linkovi">
+                <a href="index.html">projects</a>
+            </div>
+        </div> 
+
+        <button class="burger icon-menu" onclick="openMenu()">
+            <span></span>
+            <span class=""></span> <!-- can add/remove 'hidden' to this el for 2/3 line -->
+            <span></span>
+          </button>
+
+        <!--section-->
+        <section>
+            <a href="index.html">
+                <div class="icon-back">
+                </div>
+            </a>
+            
+                <div class="logo-container">
+                    <div class="logo-ego-friend"></div>
+                </div>
+
+                <div class="prazan"></div>
+    
+               <div id="negative" class="logo-container-negative absolute">
+                    <div class="logo-negative"></div>
+                </div>
+        
+            
+            <!--three dots-->
+            <a href="#first-scroll"><div class="dot-flashing"></div></a>
+
+            <div id="first-scroll" class="project-picture-container">
+                <div class="project-picture">
+                    <img src="img/ego-friend-finaljpg-03.jpg" alt="Dizajn pakovanja">
+                </div>
+            </div> 
+        </section>
+
+        <div id="tekst">
+            <div class="left">
+                <div class="projekat">
+                    <div id="projekat"><p>projekat</p></div>
+                    <div id="prazan"></div>
+                    <div id="ImeProjekta">Ego Friend</div>
+                    <div id="OpisProjekta">Ego Friend je brend namenjen ženama koje znaju
+                        da je pre svega bitno voleti sebe. Pakuje proizvode
+                        za negu lepote. Iskren i direktan ovaj brend za
+                        cilj ima otvorenu komunikaciju sa potrošačima.</div>
+                </div>
+                <div class="zadatak">
+                   <div id="zadatak"><p>zadatak</p></div>
+                   <div id="prazan"></div>
+                   <div id="ImeZadatka">Dizajn<br>pakovanja</div>
+                   <div id="OpisZadatka">Narativ brenda najbolje prepoznajemo po tome 
+                    što nas na  bilo koji način uvlači u priču - dakle 
+                    narativ brenda je pre svega koncept koji je 
+                    relevantan brendu i koji može da traje.</div>
+                </div>
+            </div> 
+            <div class="right">
+               <div class="predmet">
+                   <div id="predmet"><p>predmet</p></div>
+                   <div id="ImePredmeta">Prostorna<br>grafika</div>
+               </div>
+               <div class="profesor">
+                   <div id="profesor"><p>profesor</p></div>
+                   <div id="ImeProfesora">Miloš Ilić</div>
+               </div>
+            </div>
+       </div> <!--div tekst ends-->
+
+       <a href="#top"><div class="scroll-to-top"></div></a>
+
+       <a href="dnevnik-izgubljenih-dana.html"><div id="next"></div></a>
+       <a href="gin.html"><div id="previous"></div></a>
+    </div> 
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/script-sticky.js"></script>
+    <script src="js/script-menu.js"></script>
+    <script src="js/script-scroll-to-top.js"></script>
+
+</body>
+</html>
